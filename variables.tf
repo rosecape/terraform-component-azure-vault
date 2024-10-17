@@ -1,3 +1,15 @@
+variable "admin_users" {
+  type        = list(string)
+  description = "List of users that should have admin access to the key vault"
+  default     = []
+}
+
+variable "admin_service_principals" {
+  type        = list(string)
+  description = "List of service principals that should have admin access to the key vault"
+  default     = []
+}
+
 variable "full_access_service_principals" {
   type        = list(string)
   description = "List of service principals that should have full access to the key vault"
